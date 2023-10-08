@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Listen Up | Connecting Path</title>
+  </head>
+  <body>
+    <div class="container">
+      <!---add hidden class later-->
+      <header class="header">
+        <img src="img/logo.png" alt="" class="logo" />
+      </header>
+
+      <main class="flex">
+        <div class="navigation">
+          <nav class="sidenav">
+            <div class="small">
+              <h2 class="home__heading small__p">Create your first playlist</h2>
+              <p class="home__p small__p">It's easy, we'll help you</p>
+              <button class="small__btn">Create playlist</button>
+            </div>
+            <div class="small">
+              <h2 class="home__heading small__p">Create your first playlist</h2>
+              <p class="home__p small__p">It's easy, we'll help you</p>
+              <button class="small__btn">Create playlist</button>
+            </div>
+
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-reload"></use>
+                  </svg>
+                  <span>history</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-credit-card"></use>
+                  </svg>
+                  <span>subscription</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="home">
+          <h1 class="heading-1">Listen up</h1>
+          <h2 class="heading-2">Connecting paths...come with us!</h2>
+          <button class="signup-btn btn--show-modal">Play🎧</button>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">Log in to listen for free</h2>
+      <form class="modal__form">
+        <label>Username</label>
+        <input type="text" class="input__user" />
+        <label>Password</label>
+        <input type="password" class="input__pin" maxlength="4" />
+        <p class="error hidden">Incorrect Info. Try again</p>
+        <button class="input__btn">Sign in &rarr;</button>
+      </form>
+    </div>
+
+    <div class="overlay hidden">
+      <img src="img/logo.png" alt="" class="logo" />
+      <!-- NOTIFICATION -->
+      <figure class="notification hidden">
+        <div class="notification__body">Successfully Logged in! &#128640;</div>
+        <div class="notification__progress"></div>
+      </figure>
+    </div>
+
+    <div class="userPage hidden">
+      <!---add hidden class later-->
+      <header class="header">
+        <img src="img/logo.png" alt="" class="logo" />
+
+        <form action="#" class="search">
+          <button class="search__btn">&rarr;</button>
+          <input type="text" class="search__input" placeholder="Search" />
+        </form>
+
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-download"></use>
+            </svg>
+          </div>
+
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-equalizer"></use>
+            </svg>
+          </div>
+        </nav>
+      </header>
+
+      <main class="flex">
+        <div class="navigation">
+          <div class="user">
+            <img src="img/user-Mikel.jpg" alt="User" class="user__img hidden" />
+            <h4 class="user__name">Mikel</h4>
+          </div>
+
+          <nav class="sidenav">
+            <ul class="nav">
+              <li class="nav__item nav__item--active" id="homie">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-home3"></use>
+                  </svg>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-paperclip"></use>
+                  </svg>
+                  <span>category</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="likeNav">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                  <span>likes</span>
+                </a>
+              </li>
+
+              <li class="nav__item" id="historyNav">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-reload"></use>
+                  </svg>
+                  <span>history</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-bullhorn"></use>
+                  </svg>
+                  <span>Featured</span>
+                </a>
+              </li>
+
+              <!-- <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  </svg>
+                  <span>Store</span>
+                </a>
+              </li> -->
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <span>favourite</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-credit-card"></use>
+                  </svg>
+                  <span>subscription</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="legal">
+              <h3 class="active">My playlist #1</h3>
+              <h3>Christmas tracks</h3>
+              <h3>Other playlists</h3>
+            </div>
+          </nav>
+        </div>
+
+        <div class="home_">
+          <div class="search_ hidden">
+            <h4 class="feature__heading">Recent searches</h4>
+            <ul class="search__list">
+              <li>
+                <a href="#55" class="search__link">
+                  <figure class="search__fig">
+                    <img src="img/img-2.jpg" alt="test" />
+                  </figure>
+                  <div class="search__data">
+                    <h4 class="search__name">Ion Wanna Hear It</h4>
+                    <p class="search__artist">Rod Wave</p>
+                  </div>
+                </a>
+                <button class="search__remove">&times;</button>
+              </li>
+              <li>
+                <a href="#55" class="search__link">
+                  <figure class="search__fig">
+                    <img src="img/img-3.jpg" alt="test" />
+                  </figure>
+                  <div class="search__data">
+                    <h4 class="search__name">Achieving</h4>
+                    <p class="search__artist">Rich Homie Quan</p>
+                  </div>
+                </a>
+                <button class="search__remove">&times;</button>
+              </li>
+              <li>
+                <a href="#55" class="search__link">
+                  <figure class="search__fig">
+                    <img src="img/img-4.jpg" alt="test" />
+                  </figure>
+                  <div class="search__data">
+                    <h4 class="search__name">All My Life</h4>
+                    <p class="search__artist">Lil durk ft J.Cole</p>
+                  </div>
+                </a>
+                <button class="search__remove">&times;</button>
+              </li>
+            </ul>
+            <a href="#" class="clear search__artist">Clear recent searches</a>
+          </div>
+
+          <div class="home__page">
+            <!---add hidden class later-->
+            <nav class="home__nav">
+              <div class="home__greeting">salutamos🤍</div>
+            </nav>
+            <div class="home__sign">
+              <h2 class="home__heading">Focus</h2>
+              <div class="home__features">
+                <div class="feature" data-playlist-id="peaceful">
+                  <img
+                    src="img/img-1.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Peaceful Sounds</h4>
+                    <p class="feature__p">
+                      Peaceful sounds to help you slow down, breathe and relax.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="deepfocus">
+                  <img
+                    src="img/img-2.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Deep Focus</h4>
+                    <p class="feature__p">
+                      Keep calm and focus with ambient and post-rock music.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="international">
+                  <img
+                    src="img/img-3.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">International Study</h4>
+                    <p class="feature__p">
+                      Focus with soft study music in the background.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="focusflow">
+                  <img
+                    src="img/img-4.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Focus Flow</h4>
+                    <p class="feature__p">
+                      Uptempo instrumental hip hop beats.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="home__sign">
+              <h2 class="home__heading">Playlists</h2>
+              <div class="home__features">
+                <div class="feature" data-playlist-id="breaklimits">
+                  <img
+                    src="img/img-1.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Break Limits</h4>
+                    <p class="feature__p">Words beyond action.</p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="enjoyalone">
+                  <img
+                    src="img/img-2.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Learning to enjoy being...</h4>
+                    <p class="feature__p">Motivational Speeches.</p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="repeatrewind">
+                  <img
+                    src="img/img-3.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Repeat Rewind</h4>
+                    <p class="feature__p">Your past favorites.</p>
+                  </div>
+                </div>
+                <div class="feature" data-playlist-id="releaseradar">
+                  <img
+                    src="img/img-4.jpg"
+                    alt="features"
+                    class="feature__img"
+                  />
+                  <div class="feature__block">
+                    <h4 class="feature__heading">Release Radar</h4>
+                    <p class="feature__p">
+                      Catch all the latest music from artist you follow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player">
+            <!---add hidden class later-->
+            <div class="player-main">
+              <figure class="player__fig">
+                <img
+                  src="img/user-Saint.jpg"
+                  alt="test"
+                  class="player__img"
+                  id="playerImg"
+                />
+              </figure>
+              <div class="player__data">
+                <h4 class="search__name" id="playerName">My All</h4>
+                <p class="search__artist" id="playerArtist">Saint</p>
+                <span class="player__mov"></span>
+              </div>
+            </div>
+            <ul class="player__icons">
+              <li>
+                <svg class="player__icon heart-icon2">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="player__icon" id="play">
+                  <use xlink:href="img/sprite.svg#icon-play2"></use>
+                </svg>
+                <svg class="player__icon hidden" id="pause">
+                  <use xlink:href="img/sprite.svg#icon-pause"></use>
+                </svg>
+              </li>
+              <li>
+                <svg class="player__icon">
+                  <use xlink:href="img/sprite.svg#icon-download"></use>
+                </svg>
+              </li>
+            </ul>
+            <span class="player__mov"></span>
+            <!-- <progress id="file" value="10" max="100">32%</progress> -->
+          </div>
+          <div class="play-active hidden">
+            <div class="playing">
+              <div class="playing__header">
+                <span class="playing_close">
+                  <svg class="menu-icon">
+                    <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+                  </svg>
+                </span>
+                <figure>
+                  <h4 class="search__name">Playing from Playlist</h4>
+                  <p class="search__artist" id="fro">All songs</p>
+                </figure>
+                <span class="menu">
+                  <svg class="menu-icon" id="queueBtn">
+                    <use xlink:href="img/sprite.svg#icon-music-playlist"></use>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="playing-view">
+                <img
+                  src=""
+                  alt="song-img"
+                  class="playing-img"
+                  id="playingImg"
+                />
+              </div>
+              <div class="playing__body">
+                <div class="player__data">
+                  <h4 class="playing__name"></h4>
+                  <p class="playing__artist"></p>
+                </div>
+                <svg class="heart-icon">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </div>
+
+              <audio id="audio">
+                <source src="" type="audio/mp3" />
+                Your browser does not support the audio element
+              </audio>
+
+              <div class="movement">
+                <div class="movement__progress" id="progress"></div>
+                <div class="time">
+                  <span id="current">0:00</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+              <ul class="playing__icons">
+                <li>
+                  <svg class="playing__icon--small">
+                    <use xlink:href="img/sprite.svg#icon-shuffle"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="playing__icon" id="back">
+                    <use xlink:href="img/sprite.svg#icon-previous"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="playing__icon" id="play2">
+                    <use xlink:href="img/sprite.svg#icon-play2"></use>
+                  </svg>
+                  <svg class="playing__icon hidden" id="pause2">
+                    <use xlink:href="img/sprite.svg#icon-pause"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="playing__icon" id="next">
+                    <use xlink:href="img/sprite.svg#icon-next"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="playing__icon--small">
+                    <use xlink:href="img/sprite.svg#icon-loop"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+
+            <div class="playing-overlay"></div>
+          </div>
+
+          <div class="queue hidden">
+            <span class="queue-close">
+              <svg class="menu-icon">
+                <use xlink:href="img/sprite.svg#icon-circle-right"></use>
+              </svg>
+            </span>
+            <div class="queue-body">
+              <h4 class="feature__heading">Now playing</h4>
+              <ul class="playlist__list queue__list" style="padding: 0"></ul>
+            </div>
+          </div>
+
+          <div class="likes hidden">
+            <span class="likes_close">
+              <svg class="menu-icon">
+                <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+              </svg>
+            </span>
+            <div class="queue-body">
+              <h4 class="feature__heading">Liked songs</h4>
+              <ul class="playlist__list likes__list" style="padding: 0"></ul>
+            </div>
+          </div>
+
+          <div class="history hidden">
+            <span class="history_close">
+              <svg class="menu-icon">
+                <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+              </svg>
+            </span>
+            <div class="queue-body">
+              <h4 class="feature__heading">History</h4>
+              <ul class="playlist__list history__list" style="padding: 0"></ul>
+            </div>
+          </div>
+
+          <div class="playlist-view hidden" style="padding-top: 1.2rem">
+            <span class="playlist-close">
+              <svg class="menu-icon">
+                <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+              </svg>
+            </span>
+            <div class="playlist" style="padding-top: 1.2rem">
+              <h4 class="feature__heading" id="playlist-heading"></h4>
+              <ul class="playlist__list" style="padding: 0" id="playlist__list">
+                <!-- <li>
+                  <a href="#55" class="playlist__link">
+                    <figure class="playlist__fig">
+                      <img src="img/alecmonopoly-0003.jpg" alt="test" />
+                    </figure>
+                    <div class="playlist__data">
+                      <h4 class="playlist__name">All My Life</h4>
+                      <p class="playlist__artist">Lil durk ft J.Cole</p>
+                    </div>
+                  </a>
+                  <div class="view-icons">
+                    <figure class="playing-gif">
+                      <img src="img/playing.gif" alt="playing">
+                    </figure>
+                    <svg class="view-icon">
+                      <use xlink:href="img/sprite.svg#icon-download"></use>
+                    </svg>
+                    <svg class="view-icon">
+                      <use xlink:href="img/sprite.svg#icon-play2"></use>
+                    </svg>
+                  </div>
+                  <button class="playlist__remove">&times;</button>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
