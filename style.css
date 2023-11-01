@@ -4,6 +4,7 @@ html {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+
 button {
   cursor: pointer;
   transition: all 0.6s;
@@ -677,7 +678,7 @@ span {
 
 .playing-img {
   height: auto;
-  width: 14rem;
+  width: 10rem;
   border-radius: 7px;
 }
 
