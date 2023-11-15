@@ -659,7 +659,7 @@ span {
   z-index: 1500;
   transition: all 0.5s;
   background-color: #535050;
-  height: 90vh;
+  height: auto;
   padding: 0 2rem;
   width: 55%;
 }
